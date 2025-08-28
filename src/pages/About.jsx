@@ -18,22 +18,29 @@ export default function About() {
         </p>
       </section>
 
-      {/* Skills Section */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 text-gray-900 text-center border-b-2 border-sky-300 inline-block pb-1">Skills</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {['Java','Java Backend', 'C++', 'Python', 'React', 'Spring Boot', 'SQL', 'Tailwind CSS', 'DSA', 'AI/ML' , 'Spring FrameWork'].map(skill => (
-            <span
-              key={skill}
-              className={`px-5 py-2 rounded-full font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ${
-                skill === 'Java' ? 'bg-orange-100 text-orange-700' : 'bg-sky-100 text-sky-700'
-              }`}
-            >
-              {skill} {skill === 'Java' && <span className="ml-1 text-xs font-semibold bg-orange-200 text-orange-800 px-2 py-0.5 rounded-full">Core</span>}
-            </span>
-          ))}
-        </div>
-      </section>
+<section>
+  <h2 className="text-3xl font-semibold mb-6 text-gray-900 text-center border-b-2 border-sky-300 inline-block pb-1">Skills</h2>
+  <div className="flex flex-wrap justify-center gap-4">
+    {['Java','OOPS-JAVA','Java Backend','C++','Python','React','Spring Boot','SQL','Tailwind CSS','DSA','AI/ML','Spring FrameWork'].map(skill => (
+      <span
+        key={skill}
+        className={`px-5 py-2 rounded-full font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ${
+          skill === 'Java' || skill === 'OOPS-JAVA'
+            ? 'bg-orange-100 text-orange-700'
+            : 'bg-sky-100 text-sky-700'
+        }`}
+      >
+        {skill} 
+        {(skill === 'Java' || skill === 'OOPS-JAVA') && (
+          <span className="ml-1 text-xs font-semibold bg-orange-200 text-orange-800 px-2 py-0.5 rounded-full">
+            Core
+          </span>
+        )}
+      </span>
+    ))}
+  </div>
+</section>
+
           {/* CGPA Section */}
 <section className="max-w-4xl mx-auto mb-12 bg-white/40 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center">
   <h2 className="text-3xl font-bold mb-4 text-gray-900">Academic Performance</h2>
